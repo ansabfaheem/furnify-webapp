@@ -1,0 +1,63 @@
+/* Navbar.css */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-link {
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.nav-link.active {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.desktop-menu {
+    display: flex !important;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mobile-toggle {
+    display: none !important;
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: block !important;
+    }
+}

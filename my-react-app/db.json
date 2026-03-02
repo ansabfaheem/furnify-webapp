@@ -1,0 +1,301 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@furnify.com",
+      "password": "admin",
+      "name": "Admin User",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "email": "user@furnify.com",
+      "password": "user",
+      "name": "John Doe",
+      "role": "user"
+    },
+    {
+      "id": "a9aa",
+      "name": "Ansab",
+      "email": "ansabatbridgeon@gmail.com",
+      "password": "ansab@1178",
+      "role": "user"
+    },
+    {
+      "id": "279f",
+      "name": "ansab",
+      "email": "shonna@gmail.com",
+      "password": "ansab111",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Green Velvet Armchair",
+      "category": "Living Room",
+      "price": 18500,
+      "description": "Elegant green velvet armchair with a modern silhouette.",
+      "image": "/images/Green_velvet_armchair_59c7a13b.png",
+      "isNew": true,
+      "stock": 10
+    },
+    {
+      "id": "2",
+      "name": "Oak Dining Table",
+      "category": "Dining",
+      "price": 28000,
+      "description": "Solid oak dining table, perfect for family gatherings.",
+      "image": "/images/Oak_dining_table_92014cf5.png",
+      "isNew": false,
+      "stock": 5
+    },
+    {
+      "id": "3",
+      "name": "Grey Loveseat Sofa",
+      "category": "Living Room",
+      "price": 38000,
+      "description": "Compact and comfortable grey loveseat for modern living spaces.",
+      "image": "/images/Grey_loveseat_sofa_14fdfc11.png",
+      "isNew": true,
+      "stock": 8
+    },
+    {
+      "id": "4",
+      "name": "Black Office Chair",
+      "category": "Office",
+      "price": 11000,
+      "description": "Ergonomic black office chair for maximum productivity.",
+      "image": "/images/Black_office_chair_83719903.png",
+      "isNew": false,
+      "stock": 15
+    },
+    {
+      "id": "5",
+      "name": "Wooden Nightstand",
+      "category": "Bedroom",
+      "price": 1500,
+      "description": "Classic wooden nightstand with drawer storage.",
+      "image": "/images/Wooden_nightstand_08f65ff0.png",
+      "isNew": false,
+      "stock": 20
+    },
+    {
+      "id": "6",
+      "name": "White Dresser",
+      "category": "Bedroom",
+      "price": 15000,
+      "description": "Spacious white dresser with ample storage space.",
+      "image": "/images/White_dresser_241a6341.png",
+      "isNew": false,
+      "stock": 12
+    },
+    {
+      "id": "7",
+      "name": "Marble Coffee Table",
+      "category": "Living Room",
+      "price": 21000,
+      "description": "Luxurious marble coffee table that adds sophistication to any room.",
+      "image": "/images/Marble_coffee_table_376fefbe.png",
+      "isNew": true,
+      "stock": 6
+    },
+    {
+      "id": "8",
+      "name": "Mustard Reading Chair",
+      "category": "Living Room",
+      "price": 17000,
+      "description": "Cozy mustard yellow chair, ideal for your reading nook.",
+      "image": "/images/Mustard_reading_chair_1138a357.png",
+      "isNew": false,
+      "stock": 14
+    },
+    {
+      "id": "9",
+      "name": "Walnut TV Stand",
+      "category": "Living Room",
+      "price": 25000,
+      "description": "Mid-century modern walnut TV stand with sleek lines.",
+      "image": "/images/Walnut_TV_stand_be33f27a.png",
+      "isNew": false,
+      "stock": 9
+    },
+    {
+      "id": "10",
+      "name": "White Platform Bed",
+      "category": "Bedroom",
+      "price": 48000,
+      "description": "Minimalist white platform bed for a peaceful bedroom aesthetic.",
+      "image": "/images/White_platform_bed_737dddbc.png",
+      "isNew": true,
+      "stock": 4
+    },
+    {
+      "id": "11",
+      "name": "Beige Recliner Chair",
+      "category": "Living Room",
+      "price": 16500,
+      "description": "Plush beige recliner for ultimate relaxation.",
+      "image": "/images/Beige_recliner_chair_70ee38c1.png",
+      "isNew": false,
+      "stock": 7
+    },
+    {
+      "id": "12",
+      "name": "Black Corner Desk",
+      "category": "Office",
+      "price": 12500,
+      "description": "Space-saving black corner desk for home offices.",
+      "image": "/images/Black_corner_desk_c466b754.png",
+      "isNew": true,
+      "stock": 8
+    },
+    {
+      "id": "13",
+      "name": "Cream Tufted Bench",
+      "category": "Bedroom",
+      "price": 8500,
+      "description": "Elegant cream tufted bench for entryways or bedrooms.",
+      "image": "/images/Cream_tufted_bench_29c9d3ea.png",
+      "isNew": false,
+      "stock": 11
+    },
+    {
+      "id": "14",
+      "name": "Glass Desk",
+      "category": "Office",
+      "price": 14500,
+      "description": "Modern glass desk with a minimalist aesthetic.",
+      "image": "/images/Glass_desk_774b5462.png",
+      "isNew": false,
+      "stock": 6
+    },
+    {
+      "id": "15",
+      "name": "Grey Sectional Sofa",
+      "category": "Living Room",
+      "price": 42000,
+      "description": "Large grey sectional sofa for family entertainment rooms.",
+      "image": "/images/Grey_sectional_sofa_ee677cd9.png",
+      "isNew": true,
+      "stock": 3
+    },
+    {
+      "id": "16",
+      "name": "Modern Living Room Set",
+      "category": "Living Room",
+      "price": 85000,
+      "description": "Complete living room furniture set.",
+      "image": "/images/Hero_living_room_scene_2b588cd1.png",
+      "isNew": true,
+      "stock": 2
+    },
+    {
+      "id": "17",
+      "name": "Navy Blue Ottoman",
+      "category": "Decor",
+      "price": 4500,
+      "description": "Versatile navy blue ottoman for extra seating or footrest.",
+      "image": "/images/Navy_blue_ottoman_4b7ccf85.png",
+      "isNew": false,
+      "stock": 15
+    },
+    {
+      "id": "18",
+      "name": "Oak Dining Chairs (Set)",
+      "category": "Dining",
+      "price": 9500,
+      "description": "Set of 2 sturdy oak dining chairs.",
+      "image": "/images/Oak_dining_chairs_2f91d6a5.png",
+      "isNew": false,
+      "stock": 12
+    },
+    {
+      "id": "19",
+      "name": "Round Black Mirror",
+      "category": "Decor",
+      "price": 3500,
+      "description": "Stylish round mirror with a matte black frame.",
+      "image": "/images/Round_black_mirror_d9eba226.png",
+      "isNew": true,
+      "stock": 20
+    },
+    {
+      "id": "20",
+      "name": "White Sideboard",
+      "category": "Dining",
+      "price": 19500,
+      "description": "Classic white sideboard cabinet for dining rooms.",
+      "image": "/images/White_sideboard_cabinet_3392f35a.png",
+      "isNew": false,
+      "stock": 5
+    },
+    {
+      "id": "21",
+      "name": "Wooden Bar Stool",
+      "category": "Dining",
+      "price": 5500,
+      "description": "Rustic wooden bar stool with comfortable seating.",
+      "image": "/images/Wooden_bar_stool_6d607b45.png",
+      "isNew": false,
+      "stock": 18
+    },
+    {
+      "id": "22",
+      "name": "Wooden Bookshelf",
+      "category": "Office",
+      "price": 11500,
+      "description": "Tall wooden bookshelf for organized storage.",
+      "image": "/images/Wooden_bookshelf_38b53bac.png",
+      "isNew": false,
+      "stock": 8
+    }
+  ],
+  "carts": [
+    {
+      "id": "0ace",
+      "userId": "a9aa",
+      "items": []
+    },
+    {
+      "id": "ab6e",
+      "userId": "2",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "product": {
+            "id": "1",
+            "name": "Green Velvet Armchair",
+            "category": "Chair",
+            "price": 18500,
+            "description": "Elegant green velvet armchair with a modern silhouette.",
+            "image": "/images/Green_velvet_armchair_59c7a13b.png",
+            "isNew": true,
+            "stock": 10
+          }
+        },
+        {
+          "productId": "2",
+          "quantity": 3,
+          "product": {
+            "id": "2",
+            "name": "Oak Dining Table",
+            "category": "Dining",
+            "price": 28000,
+            "description": "Solid oak dining table, perfect for family gatherings.",
+            "image": "/images/Oak_dining_table_92014cf5.png",
+            "isNew": false,
+            "stock": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "0d5f",
+      "userId": "279f",
+      "items": []
+    }
+  ],
+  "orders": []
+}
