@@ -126,3 +126,30 @@
     width: 100%;
     justify-content: space-between;
 }
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+    .cart-item {
+        padding: 12px;
+        gap: 12px;
+    }
+    .cart-item-image {
+        width: 64px;
+        height: 64px;
+    }
+    .cart-item-name {
+        font-size: 0.95rem;
+    }
+    .cart-item-price {
+        font-size: 0.9rem;
+    }
+    .cart-item-actions {
+        gap: 5px;
+    }
+    .qty-control-btn {
+        padding: 3px;
+    }
+    .remove-item-btn {
+        padding: 4px;
+    }
+}

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import { useAuth } from '../context/AuthContext';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearCartAsync, selectCartTotal } from '../redux/slices/cartSlice';
 import { api } from '../services/api';
 import './Checkout.css';
 
 const Checkout = () => {
-    const { cart, cartTotal, clearCart } = useCart();
-    const { user } = useAuth();
+    const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart.items);
+    const cartTotal = useSelector(selectCartTotal);
+    const { user } = useSelector(state => state.auth);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
@@ -28,7 +30,7 @@ const Checkout = () => {
         };
 
         await api.createOrder(orderData);
-        await clearCart();
+        await dispatch(clearCartAsync()).unwrap();
 
         setLoading(false);
         navigate('/orders');

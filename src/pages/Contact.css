@@ -111,3 +111,17 @@
     justify-content: center;
     gap: 10px;
 }
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-card {
+        padding: 20px;
+    }
+}

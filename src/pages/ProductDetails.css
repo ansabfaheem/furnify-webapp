@@ -111,3 +111,28 @@
     align-items: center;
     color: var(--color-light-text);
 }
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+    .product-details-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .product-title {
+        font-size: 1.8rem;
+    }
+    .product-price-large {
+        font-size: 1.3rem;
+    }
+    .product-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    .quantity-selector {
+        justify-content: center;
+    }
+    .add-to-cart-action-btn {
+        width: 100%;
+    }
+}

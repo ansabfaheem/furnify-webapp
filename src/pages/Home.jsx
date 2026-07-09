@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Shield, Truck } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import { api } from '../services/api';
 import './Home.css';
 
 const Home = () => {
     const [featuredProducts, setFeaturedProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products?_limit=4')
-            .then(res => res.json())
+        api.getProducts(null, 4)
             .then(data => setFeaturedProducts(data))
             .catch(err => console.error(err));
     }, []);

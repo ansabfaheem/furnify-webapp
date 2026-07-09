@@ -1,0 +1,244 @@
+/* ====== Admin Layout ====== */
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Soft light grey */
+}
+
+/* ====== Main Content Area ====== */
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; 
+}
+
+/* ====== Topbar Navigation ====== */
+.admin-topbar {
+    background-color: #ffffff;
+    height: 70px;
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e7eb; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar-brand h2 {
+    color: #ea580c; /* Clean orange tone */
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.topbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.topbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #6b7280; /* Lighter grey */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.topbar-nav .nav-link:hover, 
+.topbar-nav .nav-link.active {
+    background-color: #ffedd5; /* Soft orange bg */
+    color: #ea580c; /* Orange text */
+}
+
+.topbar-actions .logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid #ea580c;
+    color: #ea580c;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.topbar-actions .logout-btn:hover {
+    background-color: #ea580c;
+    color: #ffffff;
+}
+
+/* ====== Inner Content Workspace ====== */
+.admin-content {
+    flex: 1;
+    padding: 2.5rem;
+    overflow-y: auto;
+}
+
+/* ====== Dashboard Home ====== */
+.dashboard-home {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.dashboard-header-intro {
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.dashboard-header-intro h2 {
+    margin: 0 0 0.5rem 0;
+    color: #1f2937; /* Darker grey */
+    font-size: 1.75rem;
+    font-weight: 800; /* Extra bold */
+}
+
+.dashboard-header-intro p {
+    color: #6b7280; /* Lighter grey for subtext */
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background-color: #ffffff; /* White card against soft grey layout */
+    padding: 2.5rem 2rem;
+    border-radius: 16px; /* Highly rounded for modern look */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03); 
+    border: 1px solid #e5e7eb; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment for a stylish look */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #ffedd5; /* Light orange */
+    color: #ea580c; /* Primary orange icon */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(234, 88, 12, 0.2);
+}
+
+.stat-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937; 
+}
+
+.stat-card p {
+    color: #6b7280; 
+    margin: 0 0 2rem 0;
+    flex: 1;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Buttons in Admin */
+.stat-card .btn-outline {
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    color: #ea580c; /* Primary action color */
+    border: 2px solid #ea580c;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    align-self: center; /* Center the button */
+    width: 100%;
+    max-width: 200px;
+}
+
+.stat-card .btn-outline:hover {
+    background-color: #ea580c; /* Solid orange for hover */
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(234, 88, 12, 0.3);
+}
+
+/* Added styles to ensure all typical buttons in admin share the new theme */
+.admin-main .btn.btn-primary, 
+.admin-main button.bg-blue-600 {
+    background-color: #ea580c !important;
+    border-color: #ea580c !important;
+    border-radius: 6px;
+}
+
+.admin-main .btn.btn-primary:hover, 
+.admin-main button.bg-blue-600:hover {
+    background-color: #c2410c !important;
+    border-color: #c2410c !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    .admin-topbar {
+        padding: 0 1.5rem;
+    }
+    
+    .topbar-brand h2 {
+        display: none; /* Hide brand loosely on mobile */
+    }
+
+    .topbar-nav {
+        gap: 0.5rem;
+    }
+
+    .topbar-nav .nav-link {
+        padding: 0.5rem;
+    }
+
+    .topbar-nav .nav-link span {
+        display: none; /* Only icons on mobile */
+    }
+
+    .topbar-actions .logout-btn span {
+        display: none; /* Only icon on mobile */
+    }
+
+    .admin-content {
+        padding: 1.5rem;
+    }
+}

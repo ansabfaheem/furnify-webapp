@@ -64,3 +64,13 @@
 .pay-btn {
     width: 100%;
 }
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+    .checkout-form-container {
+        padding: 20px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}

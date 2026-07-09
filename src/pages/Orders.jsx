@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useSelector } from 'react-redux';
 import './Orders.css';
+import { api } from '../services/api';
 
 const Orders = () => {
-    const { user } = useAuth();
+    const { user } = useSelector(state => state.auth);
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
@@ -13,11 +14,12 @@ const Orders = () => {
     }, [user]);
 
     const fetchOrders = async () => {
-        // In a real app we would have an API endpoint for orders by user
-        // For json-server we can filter
-        const res = await fetch(`http://localhost:5000/orders?userId=${user.id}`);
-        const data = await res.json();
-        setOrders(data);
+        try {
+            const data = await api.getOrders(user.id);
+            setOrders(data);
+        } catch (error) {
+            console.error("Failed to fetch orders", error);
+        }
     };
 
     return (

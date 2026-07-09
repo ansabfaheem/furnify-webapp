@@ -1,11 +1,17 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCartAsync, updateQuantityAsync, selectCartTotal } from '../redux/slices/cartSlice';
 import { Trash2, Plus, Minus, ArrowRight } from 'lucide-react';
 import './Cart.css';
 
 const Cart = () => {
-    const { cart, removeFromCart, updateQuantity, cartTotal } = useCart();
+    const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart.items);
+    const cartTotal = useSelector(selectCartTotal);
+
+    const updateQuantity = (productId, delta) => dispatch(updateQuantityAsync({ productId, delta }));
+    const removeFromCart = (productId) => dispatch(removeFromCartAsync(productId));
     const navigate = useNavigate();
 
     return (

@@ -55,3 +55,15 @@
     font-weight: 700;
     color: var(--color-secondary);
 }
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .order-item-row {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}

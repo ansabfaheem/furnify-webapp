@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard';
 import { Filter, ArrowUpDown } from 'lucide-react';
 import { api } from '../services/api';
 import './Products.css';
-
+ 
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -38,8 +38,8 @@ const Products = () => {
 
     const categories = ['All', 'Office', 'Living Room', 'Bedroom', 'Dining', 'Decor'];
 
-    // Client-side search and sorting only (Category is now handled by API)
     const filteredProducts = products.filter(product => {
+        if (product.status === 'inactive') return false; // Hide inactive products
         const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesSearch;
     });

@@ -2,52 +2,66 @@
   "users": [
     {
       "id": "1",
-      "email": "admin@furnify.com",
+      "email": "admin@gmail.com",
       "password": "admin",
       "name": "Admin User",
       "role": "admin"
     },
     {
       "id": "2",
-      "email": "user@furnify.com",
+      "email": "user@gmail.com",
       "password": "user",
       "name": "John Doe",
-      "role": "user"
+      "role": "admin",
+      "status": "active"
     },
     {
       "id": "a9aa",
       "name": "Ansab",
       "email": "ansabatbridgeon@gmail.com",
-      "password": "ansab123",
-      "role": "user"
+      "password": "11111111",
+      "role": "admin",
+      "status": "inactive"
     },
     {
       "id": "279f",
       "name": "ansab",
       "email": "shonna@gmail.com",
       "password": "ansab111",
-      "role": "user"
+      "role": "admin",
+      "status": "inactive"
     },
     {
       "id": "1fff",
       "name": "ansab",
       "email": "af@telegmail.com",
       "password": "af123",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "5b76",
       "name": "AF",
       "email": "af@gmail.com",
       "password": "ansab1",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "5e83",
       "name": "ANsab",
       "email": "ansab1@gmail.com",
       "password": "12345678",
-      "role": "user"
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "db7b",
+      "name": "Ansab",
+      "email": "ansab78@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "status": "inactive"
     }
   ],
   "products": [
@@ -55,11 +69,12 @@
       "id": "1",
       "name": "Green Velvet Armchair",
       "category": "Living Room",
-      "price": 18500,
+      "price": 15000,
       "description": "Elegant green velvet armchair with a modern silhouette.",
       "image": "/images/Green_velvet_armchair_59c7a13b.png",
       "isNew": true,
-      "stock": 10
+      "stock": 14,
+      "status": "active"
     },
     {
       "id": "2",
@@ -68,8 +83,9 @@
       "price": 28000,
       "description": "Solid oak dining table, perfect for family gatherings.",
       "image": "/images/Oak_dining_table_92014cf5.png",
-      "isNew": false,
-      "stock": 5
+      "isNew": true,
+      "stock": 5,
+      "status": "active"
     },
     {
       "id": "3",
@@ -298,7 +314,7 @@
         },
         {
           "productId": "2",
-          "quantity": 3,
+          "quantity": 4,
           "product": {
             "id": "2",
             "name": "Oak Dining Table",
@@ -308,6 +324,20 @@
             "image": "/images/Oak_dining_table_92014cf5.png",
             "isNew": false,
             "stock": 5
+          }
+        },
+        {
+          "productId": "11",
+          "quantity": 1,
+          "product": {
+            "id": "11",
+            "name": "Beige Recliner Chair",
+            "category": "Living Room",
+            "price": 16500,
+            "description": "Plush beige recliner for ultimate relaxation.",
+            "image": "/images/Beige_recliner_chair_70ee38c1.png",
+            "isNew": false,
+            "stock": 7
           }
         }
       ]
@@ -345,6 +375,31 @@
     {
       "id": "1839",
       "userId": "5e83",
+      "items": []
+    },
+    {
+      "id": "dc19",
+      "userId": "db7b",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "product": {
+            "id": "1",
+            "name": "Green Velvet Armchair",
+            "category": "Living Room",
+            "price": 18500,
+            "description": "Elegant green velvet armchair with a modern silhouette.",
+            "image": "/images/Green_velvet_armchair_59c7a13b.png",
+            "isNew": true,
+            "stock": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "be58",
+      "userId": "1",
       "items": []
     }
   ],
@@ -495,6 +550,43 @@
       ],
       "totalAmount": 77000,
       "date": "2026-02-21T08:31:56.779Z",
+      "status": "Paid"
+    },
+    {
+      "id": "69e8",
+      "userId": "db7b",
+      "items": [
+        {
+          "productId": "3",
+          "quantity": 2,
+          "product": {
+            "id": "3",
+            "name": "Grey Loveseat Sofa",
+            "category": "Living Room",
+            "price": 38000,
+            "description": "Compact and comfortable grey loveseat for modern living spaces.",
+            "image": "/images/Grey_loveseat_sofa_14fdfc11.png",
+            "isNew": true,
+            "stock": 8
+          }
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "product": {
+            "id": "2",
+            "name": "Oak Dining Table",
+            "category": "Dining",
+            "price": 28000,
+            "description": "Solid oak dining table, perfect for family gatherings.",
+            "image": "/images/Oak_dining_table_92014cf5.png",
+            "isNew": false,
+            "stock": 5
+          }
+        }
+      ],
+      "totalAmount": 104000,
+      "date": "2026-03-07T08:58:41.908Z",
       "status": "Paid"
     }
   ]

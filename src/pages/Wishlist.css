@@ -1,0 +1,135 @@
+.wishlist-empty-state {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.wishlist-empty-state h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-4);
+}
+
+.wishlist-empty-state p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.wishlist-title {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-6);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-4);
+}
+
+/* Sideways list matching Cart-like horizontal styling */
+.sideways-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.sideways-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.sideways-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.sideways-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sideways-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.sideways-name:hover {
+    color: var(--color-primary);
+}
+
+.sideways-price {
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin: 0;
+}
+
+.sideways-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sideways-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.sideways-remove-btn {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.sideways-remove-btn:hover {
+    background-color: #fef2f2;
+}
+
+/* ====== Responsive Sideways ====== */
+@media (max-width: 600px) {
+    .sideways-item {
+        padding: 12px;
+        gap: 12px;
+    }
+    .sideways-image {
+        width: 60px;
+        height: 60px;
+    }
+    .sideways-name {
+        font-size: 0.95rem;
+    }
+    .sideways-price {
+        font-size: 0.9rem;
+    }
+    .sideways-btn-text {
+        display: none; /* Hide text on mobile button */
+    }
+    .sideways-actions {
+        gap: 5px;
+    }
+    .sideways-add-btn {
+        padding: 8px;
+    }
+}

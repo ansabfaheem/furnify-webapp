@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../redux/slices/authSlice';
 import './Register.css';
 
 const Register = () => {
@@ -8,7 +9,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const { register } = useAuth();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -18,10 +19,10 @@ const Register = () => {
             return;
         }
 
-        const success = await register(name, email, password);
-        if (success) {
+        try {
+            await dispatch(registerUser({name, email, password})).unwrap();
             navigate('/');
-        } else {
+        } catch (err) {
             setError('Registration failed. Email might be in use.');
         }
     };

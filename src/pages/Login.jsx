@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../redux/slices/authSlice';
 import './Login.css';
 
 const Login = () => {
@@ -8,7 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [notification, setNotification] = useState('');
-    const { login } = useAuth();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -27,11 +28,11 @@ const Login = () => {
             return;
         }
 
-        const success = await login(email, password);
-        if (success) {
+        try {
+            await dispatch(loginUser({email, password})).unwrap();
             navigate('/');
-        } else {
-            setError('Invalid email or password');
+        } catch (err) {
+            setError(err || 'Invalid email or password');
         }
     };
 

@@ -10,7 +10,7 @@ const Footer = () => {
                 {/* Brand Info */}
                 <div className="footer-brand">
                     <h3>
-                        EcomFurniture
+                        Furnify
                     </h3>
                     <p>
                         Crafting premium furniture that transforms houses into homes. Experience designs that blend aesthetics with superior comfort.
@@ -57,7 +57,7 @@ const Footer = () => {
                     <a href="#" className="social-icon"><Instagram size={20} /></a>
                 </div>
                 <p className="copyright">
-                    © {new Date().getFullYear()} EcomFurniture. All rights reserved.
+                    © {new Date().getFullYear()} @Furnify. All rights reserved.
                 </p>
             </div>
         </footer>
