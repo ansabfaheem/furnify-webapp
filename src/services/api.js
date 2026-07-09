@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const API_URL = 'http://localhost:8000/api';
 
 const getHeaders = (extraHeaders = {}) => {
@@ -8,6 +9,9 @@ const getHeaders = (extraHeaders = {}) => {
     }
     return headers;
 };
+=======
+const API_URL = 'https://furnify-website.vercel.app/';
+>>>>>>> 18a58f815f34ab2c20408c2bfa6d443ef0cbd19e
 
 export const api = {
     // Products
